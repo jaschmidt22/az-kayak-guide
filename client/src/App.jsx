@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
-// import Header from "./components/Header/Header";
-// import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -14,7 +14,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div>
-        <h1>Test</h1>
+        <Header />
+        <main className="mx-3">
+          <Outlet />
+        </main>
+        <Footer />
       </div>
     </ApolloProvider>
   );
