@@ -12,7 +12,6 @@ const typeDefs = `
     thoughtText: String
     thoughtAuthor: String
     createdAt: String
-    comments: [Comment]!
   }
 
   type Lake {
@@ -21,13 +20,6 @@ const typeDefs = `
     location: String
     beaches: Boolean
     fishSpecies: String
-  }
-
-  type Comment {
-    _id: ID
-    commentText: String
-    commentAuthor: String
-    createdAt: String
   }
 
   type Auth {
@@ -48,9 +40,8 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addBlogPost(blogpostText: String!): BlogPost
-    addComment(blogpostId: ID!, commentText: String!): BlogPost
     removeBlogPost(blogpostId: ID!): BlogPost
-    removeComment(blogpostId: ID!, commentId: ID!): BlogPost
+  
   }
 `;
 
