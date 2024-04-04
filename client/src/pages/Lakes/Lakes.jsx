@@ -1,11 +1,39 @@
 import "./Lakes.css";
 import Hero from "../../assets/Hero.jpg";
+import Alamo from "./LAKES_images/Alamo-Lake-central.jpeg";
+import Apache from "./LAKES_images/Apache-Lake-central.jpeg";
+import Canyon from "./LAKES_images/Canyon-Lake-northern.jpeg";
+import LakePowell from "./LAKES_images/Lake-Powell-northern.jpeg";
+import ParkerCanyon from "./LAKES_images/Parker-Canyon-Lake-southern.jpg";
+import Patagonia from "./LAKES_images/Patagonia-Lake-southern.jpg";
 import CardMedia from "@mui/material/CardMedia";
 
 // Function that renders the about page & exports
 export default function Lakes() {
   return (
     <>
+      
+
+      
+
+      <div style={{ width: "70%", margin: "0 auto" }}>
+        <h1 id="about-me-title">Northern Arizona</h1>
+
+        <div className="image-container">
+        <CardMedia
+          component="img"
+          className="color-img"
+          style={{
+            height: "auto",
+            width: "50%",
+            margin: "0 auto",
+            paddingTop: "20px",
+          }}
+          image={Canyon}
+          alt="Canyon Image"
+        />
+      </div>
+
       <div className="image-container">
         <CardMedia
           component="img"
@@ -16,24 +44,77 @@ export default function Lakes() {
             margin: "0 auto",
             paddingTop: "20px",
           }}
-          image={Hero}
-          alt="Hero Image"
+          image={LakePowell}
+          alt="LakePowell Image"
         />
       </div>
 
-      <div style={{ width: "70%", margin: "0 auto" }}>
-        <h1 id="about-me-title">Come Yak with Zak!!</h1>
-        <p id="p-about">
-          We are AZ Kayak Guide and we specialize in guided kayak tours in the
-          beautiful state of Arizona. Our tours are perfect for all ages and
-          skill levels. We offer a variety of tours that range from beginner to
-          advanced. Our tours are perfect for families, couples, and solo
-          adventurers. We provide all the equipment you need for a fun and safe
-          adventure. Our guides are experienced and knowledgeable about the area
-          and will make sure you have a great time. We are committed to
-          providing a fun and safe experience for all of our guests. We look
-          forward to seeing you on the water!
-        </p>
+
+      <h1 id="about-me-title">Central Arizona</h1>
+
+<div className="image-container">
+<CardMedia
+  component="img"
+  className="color-img"
+  style={{
+    height: "auto",
+    width: "50%",
+    margin: "0 auto",
+    paddingTop: "20px",
+  }}
+  image={Alamo}
+  alt="Alamo Image"
+/>
+</div>
+
+<div className="image-container">
+<CardMedia
+  component="img"
+  className="color-img"
+  style={{
+    height: "auto",
+    width: "50%",
+    margin: "0 auto",
+    paddingTop: "20px",
+  }}
+  image={Apache}
+  alt="Apache Image"
+/>
+</div>
+
+
+<h1 id="about-me-title">Southern Arizona</h1>
+
+        <div className="image-container">
+        <CardMedia
+          component="img"
+          className="color-img"
+          style={{
+            height: "auto",
+            width: "50%",
+            margin: "0 auto",
+            paddingTop: "20px",
+          }}
+          image={ParkerCanyon}
+          alt="ParkerCanyon Image"
+        />
+      </div>
+
+      <div className="image-container">
+        <CardMedia
+          component="img"
+          className="color-img"
+          style={{
+            height: "auto",
+            width: "50%",
+            margin: "0 auto",
+            paddingTop: "20px",
+          }}
+          image={Patagonia}
+          alt="Patagonia Image"
+        />
+      </div>
+
       </div>
     </>
   );
