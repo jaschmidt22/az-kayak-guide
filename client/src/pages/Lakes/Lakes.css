@@ -12,9 +12,16 @@
     max-width: 100%;
     height: auto;
   }
+
   h1{
     font-family: Arial, Helvetica, sans-serif;
     color: #0e6d76;
+  }
+
+  h3{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
   }
   
   #about-me-title {
