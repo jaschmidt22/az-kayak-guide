@@ -1,5 +1,5 @@
 import "./About.css";
-import Hero from "../../assets/Hero.jpg";
+import AboutImage from "../../assets/AboutImage.jpg";
 import CardMedia from "@mui/material/CardMedia";
 
 // Function that renders the about page & exports
@@ -16,7 +16,7 @@ export default function About() {
             margin: "0 auto",
             paddingTop: "20px",
           }}
-          image={Hero}
+          image={AboutImage}
           alt="Hero Image"
         />
       </div>
