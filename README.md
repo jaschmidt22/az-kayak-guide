@@ -8,12 +8,13 @@ This application is designed to provide users with the ability to book a guided 
 
 ## Table of Contents
 
-1. [Installation] (#installation)
+1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Contributors](#contributors)
 4. [License](#license)
 5. [Questions](#questions)
-6. [Badges] (#badges)
+6. [Badges](#badges)
+7. [Deployed Link](#deployed-link)
 
 ## WireFrame
 
@@ -42,3 +43,7 @@ This project is licensed under the None License.
 For questions about this project, please contact https://github.com/jaschmidt22
 
 ## Badges
+
+
+## Deployed Link 
+
