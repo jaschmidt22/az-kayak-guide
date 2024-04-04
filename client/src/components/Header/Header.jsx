@@ -8,7 +8,7 @@ import "./Header.css";
 // Function that renders the header & exports
 
 export default function Header() {
-  const regions = ["Northern", "Southern", "Eastern", "Western"];
+  const regions = ["Northern", "Central", "Southern"];
 
   return (
     <div className="headerParent" style={{ padding: "0px 0px 10px 40px" }}>

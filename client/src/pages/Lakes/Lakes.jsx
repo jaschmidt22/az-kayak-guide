@@ -1,6 +1,6 @@
 import "./Lakes.css";
 import Hero from "../../assets/Hero.jpg";
-import Canyon from "./LAKES_images/Canyon-Lake-northern.jpeg";
+import Canyon from "./LAKES_images/Canyon-Lake-central.jpeg";
 import LakePowell from "./LAKES_images/Lake-Powell-northern.jpeg";
 import Alamo from "./LAKES_images/Alamo-Lake-central.jpeg";
 import Apache from "./LAKES_images/Apache-Lake-central.jpeg";
@@ -19,21 +19,6 @@ export default function Lakes() {
 
       <h1 id="about-me-title">Northern Arizona</h1>
 
-        <h4>Canyon Lake (Northern AZ)</h4>
-        <div className="image-container">
-        <CardMedia
-          component="img"
-          className="color-img"
-          style={{
-            height: "auto",
-            width: "50%",
-            margin: "0 auto",
-            paddingTop: "20px",
-          }}
-          image={Canyon}
-          alt="Canyon Image"
-        />
-        </div>
 
         <h4>Lake Powell (Northern AZ)</h4>
         <div className="image-container">
@@ -83,6 +68,22 @@ export default function Lakes() {
           }}
           image={Apache}
           alt="Apache Image"
+        />
+        </div>
+
+        <h4>Canyon Lake (Central AZ)</h4>
+        <div className="image-container">
+        <CardMedia
+          component="img"
+          className="color-img"
+          style={{
+            height: "auto",
+            width: "50%",
+            margin: "0 auto",
+            paddingTop: "20px",
+          }}
+          image={Canyon}
+          alt="Canyon Image"
         />
         </div>
 
