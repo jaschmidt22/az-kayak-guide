@@ -1,6 +1,8 @@
+
 import { gql } from '@apollo/client';
 
 
+main
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(name: $username) {
@@ -12,8 +14,21 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_BLOGPOST = gql`
+
+  mutation addBlogPost(
+    $blogPostText: String!
+    $blogPostAuthor: String!
+    $createdAt: Date!
+  ) {
+    addBlogPost(
+      blogPostText: $blogPostText
+      blogPostAuthor: $blogPostAuthor
+      createdAt: $createdAt
+    ) {
+    
   mutation addBlogPost($blogPostText: String!, $blogPostAuthor: String!, $createdAt: Date!) {
     addBlogPost(blogPostText: $blogPostText, blogPostAuthor: $blogPostAuthor, createdAt: $createdAt) {
+
       _id
       blogPostText
       blogPostAuthor
@@ -31,8 +46,20 @@ export const REMOVE_BLOGPOST = gql`
   }
 `;
 export const UPDATE_BLOGPOST = gql`
+
+  mutation updateBlogPost(
+    $blogPostId: ID!
+    $updatedText: String!
+    $updatedAt: Date!
+  ) {
+    updateBlogPost(
+      blogPostId: $blogPostId
+      updatedText: $updatedText
+      updatedAt: $updatedAt
+    ) {
+    
   mutation updateBlogPost($blogPostId: ID!, $updatedText: String!, $updatedAt: Date!) {
-    updateBlogPost(blogPostId: $blogPostId, updatedText: $updatedText, updatedAt: $updatedAt) {
+    updateBlogPost(blogPostId: $blogPostId, updatedText: $updatedText, updatedAt: $updatedA
       _id
       blogPostText
       updatedAt
