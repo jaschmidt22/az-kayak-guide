@@ -8,22 +8,30 @@ This application is designed to provide users with the ability to book a guided 
 
 ## Table of Contents
 
-1. [Usage](#usage)
-2. [Contributors](#contributors)
-3. [License](#license)
-4. [Questions](#questions)
+1. [Installation] (#installation)
+2. [Usage](#usage)
+3. [Contributors](#contributors)
+4. [License](#license)
+5. [Questions](#questions)
+6. [Badges] (#badges)
 
 ## WireFrame
 
 ![This is our rough draft wire frame of our application](az-kayak-guide/src/assets/roughdraft.png)
 
+## Installation 
+
+N/A
+
 ## Usage
 
-User can navigate to live deployed link and explore through opur applicatation.
+User can navigate to live deployed link and explore through our applicatation.
 
 ## Contributors
 
-Jessica Schmidt, Heather Serrano, Zachary Gemmill
+Jessica Schmidt (jaschmidt22)
+Heather Serrano (magneticsoul7)
+Zachary Gemmill (Zdgemmill)
 
 ## License
 
@@ -32,3 +40,5 @@ This project is licensed under the None License.
 ## Questions
 
 For questions about this project, please contact https://github.com/jaschmidt22
+
+## Badges
