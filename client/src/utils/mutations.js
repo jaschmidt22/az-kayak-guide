@@ -44,6 +44,7 @@ export const REMOVE_BLOGPOST = gql`
 `;
 export const UPDATE_BLOGPOST = gql`
 
+
   mutation updateBlogPost(
     $blogPostId: ID!
     $updatedText: String!
