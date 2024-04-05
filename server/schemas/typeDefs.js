@@ -32,9 +32,10 @@ const typeDefs = `
     user(username: String!): User
     blogposts(username: String): [BlogPost]
     blogpost(blogpostId: ID!): BlogPost
-    lakes: [Lake]
     me: User
   }
+  
+
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
