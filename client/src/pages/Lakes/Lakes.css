@@ -4,34 +4,32 @@
     overflow: hidden;
     width: 100vw;
     height: auto;
-  }
-  
-  #hero img {
+}
+
+#hero img {
     object-fit: contain;
     object-position: center;
     max-width: 100%;
     height: auto;
-  }
+}
 
-  h1{
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: #0e6d76;
-  }
+}
 
-  h3{
+#about-me-title {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-  }
-  
-  #about-me-title {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-  }
-  
-  #p-about {
+}
+
+#p-about {
     font-family: Arial, Helvetica, sans-serif;
     color: #505356;
     text-align: center;
-  }
+}
+
+.Lakes-Heading {
+    text-align: center;
+}
