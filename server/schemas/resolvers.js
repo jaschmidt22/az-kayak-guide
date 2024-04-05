@@ -47,7 +47,7 @@ const resolvers = {
 
       return { token, user };
     },
-    addBlogPost: async (parent, { blogPostText }, context) => {
+    addblogPost: async (parent, { blogPostText }, context) => {
       if (context.user) {
         const BlogPost = await BlogPost.create({
           blogPostText,

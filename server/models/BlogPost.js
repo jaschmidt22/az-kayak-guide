@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-
 const blogPostSchema = new Schema({
   blogPostText: {
     type: String,

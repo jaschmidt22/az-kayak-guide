@@ -14,7 +14,7 @@ function Navigation() {
       <Breadcrumbs aria-label="breadcrumb">
         <Link
           component={RouterLink}
-          to="/About"
+          to="/"
           underline="hover"
           color="inherit"
           className={currentPage === "/About" ? "nav-link active" : "nav-link"}

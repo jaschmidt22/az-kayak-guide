@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
 import About from "./pages/About/About.jsx";
-//import Lakes from "./Lakes.jsx";
+import Lakes from "./pages/Lakes/Lakes.jsx";
 // import Login from "./pages/Login/Login.jsx";
-// import Signup from "./pages/Signup/Signup.jsx";
+//  import Signup from "./pages/Signup/Signup.jsx";
 
 import "./index.css";
 
@@ -20,10 +20,14 @@ const router = createBrowserRouter([
         index: true,
         element: <About />,
       },
-      // {
-      //   path: "/lakes/:lakeId",
-      //   element: <Lakes />,
-      // },
+      {
+        path: "/Lakes",
+        element: <Lakes />,
+      },
+      //  {
+      //   path: "/Signup",
+      //   element: <Signup />,
+      //  }
     ],
   },
 ]);

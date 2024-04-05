@@ -8,16 +8,21 @@ import "./Header.css";
 // Function that renders the header & exports
 
 export default function Header() {
-  const regions = ["Northern", "Southern", "Eastern", "Western"];
+  const regions = ["Northern", "Central", "Southern"];
 
   return (
-    <div className="headerParent" style={{ padding: "0px 0px 10px 40px" }}>
-      <p id="header-text">AZ Kayak Guide</p>
-      <div>
+    <div className="wrapper">
+      <div className="headerParent" style={{ padding: "0px 0px 0px 40px" }}>
+        <p id="header-text">AZ Kayak Guide</p>
+
+        <Navigation />
+      </div>
+
+      <div className="region">
         <Autocomplete
           disablePortal
           id="region-menu"
-          style={{ padding: "0px 0px 10px 40px" }}
+          style={{ padding: "0px 0px 0px 40px" }}
           options={regions}
           sx={{ width: 300 }}
           renderInput={(params) => (
@@ -25,7 +30,6 @@ export default function Header() {
           )}
         />
       </div>
-      <Navigation />
     </div>
   );
 }
