@@ -42,7 +42,7 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
     addBlogPost(blogpostText: String!): BlogPost
     removeBlogPost(blogpostId: ID!): BlogPost
-  
+    updateBlogPost(blogPostId: ID!, updatedText: String!): BlogPost
   }
 `;
 

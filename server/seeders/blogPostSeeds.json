@@ -1,0 +1,22 @@
+[
+  {
+    "blogPostText": "I love this lake!",
+    "blogPostAuthor": "User1"
+  },
+  {
+    "blogPostText": "I can't wait to try this one.",
+    "blogPostAuthor": "User2"
+  },
+  {
+    "blogPostText": "I caught so many fish here.",
+    "blogPostAuthor": "User3"
+  },
+  {
+    "blogPostText": "This looks beautiful.",
+    "blogPostAuthor": "User4"
+  },
+  {
+    "blogPostText": "I didn't catch any fish here!",
+    "blogPostAuthor": "User5"
+  }
+]

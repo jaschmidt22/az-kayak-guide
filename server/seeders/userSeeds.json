@@ -2,31 +2,26 @@
   {
     "username": "User1",
     "email": "User1@user.com",
-    "password": "User1",
-    "blogPost": "I love this lake!"
+    "password": "User1"
   },
   {
     "username": "User2",
     "email": "User2@user.com",
-    "password": "User2",
-    "blogPost": "I don't this lake!"
+    "password": "User2"
   },
   {
     "username": "User3",
     "email": "User3@user.com",
-    "password": "User3",
-    "blogPost": "I can't wait to go to this lake!"
+    "password": "User3"
   },
   {
     "username": "User4",
     "email": "User4@user.com",
-    "password": "User4",
-    "blogPost": "I love kayaking!"
+    "password": "User4"
   },
   {
     "username": "User5",
     "email": "User5@user.com",
-    "password": "User5",
-    "blogPost": "This was a great lake tour!"
+    "password": "User5"
   }
 ]
