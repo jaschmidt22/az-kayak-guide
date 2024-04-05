@@ -47,7 +47,7 @@ const resolvers = {
 
       return { token, user };
     },
-    addblogPost: async (parent, { blogPostText }, context) => {
+    addBlogPost: async (parent, { blogPostText }, context) => {
       if (context.user) {
         const BlogPost = await BlogPost.create({
           blogPostText,
@@ -76,7 +76,9 @@ const resolvers = {
 
           // // Check if the user is the author of the blog post
           if (blogPost.blogPostAuthor !== context.user.username) {
-            throw new AuthenticationError("You are not authorized to update this blog post");
+            throw new AuthenticationError(
+              "You are not authorized to update this blog post"
+            );
           }
 
           // Update the blog post text
@@ -90,7 +92,9 @@ const resolvers = {
           throw new Error(`Failed to update blog post: ${error.message}`);
         }
       } else {
-        throw new AuthenticationError("You need to be logged in to update a blog post");
+        throw new AuthenticationError(
+          "You need to be logged in to update a blog post"
+        );
       }
     },
 
@@ -110,7 +114,6 @@ const resolvers = {
       }
       throw AuthenticationError;
     },
-
   },
 };
 
