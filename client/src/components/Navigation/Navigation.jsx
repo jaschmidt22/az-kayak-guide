@@ -30,6 +30,16 @@ function Navigation() {
         >
           Lakes
         </Link>
+
+        <Link
+          component={RouterLink}
+          to="/Lakes"
+          underline="hover"
+          color="inherit"
+          className={currentPage === "/BlogPage" ? "nav-link active" : "nav-link"}
+        >
+          Blog
+        </Link>
         <Link
           component={RouterLink}
           to="/Login"
