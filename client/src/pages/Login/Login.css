@@ -1,0 +1,22 @@
+.headerParent {
+    background-color: #84aaca;
+    height: "40vh";
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #header-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    color: #ffff;
+  }
+  
+  .wrapper {
+    background-color:  rgb(190, 189, 189);
+  }
+  
+  .region {
+    display: flex;
+    justify-content: flex-end;
+  }

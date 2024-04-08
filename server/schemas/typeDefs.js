@@ -4,7 +4,7 @@ const typeDefs = `
     username: String
     email: String
     password: String
-    blogposts: [BlogPost]!
+
   }
 
   type BlogPost {
@@ -12,14 +12,6 @@ const typeDefs = `
     thoughtText: String
     thoughtAuthor: String
     createdAt: String
-  }
-
-  type Lake {
-    _id: ID
-    name:String
-    location: String
-    beaches: Boolean
-    fishSpecies: String
   }
 
   type Auth {

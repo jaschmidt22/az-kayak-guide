@@ -13,15 +13,13 @@
   height: auto;
 }
 
-h1 {
+.about-title {
   font-family: Arial, Helvetica, sans-serif;
-  color: #0e6d76;
-}
-
-#about-me-title {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
+  font-size: 50px;
+  text-align: center;
+  padding-right: 165px;
+  color: #ffffff;
+  
 }
 
 #p-about {
