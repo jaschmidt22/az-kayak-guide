@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-//import { LOGIN_USER } from "../utils/mutations";
+import { LOGIN_USER } from "../../utils/mutations";
+
+import { TextField } from "@mui/material";
+import { Button, MenuItem } from "@mui/material";
+import Stack from "@mui/material/Stack";
+import { deepOrange } from "@mui/material/colors";
 
 import Auth from "../../utils/auth";
 
@@ -41,53 +45,64 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{" "}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: "pointer" }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
+    <>
+      <div>
+        <h1 style={{ display: "flex", justifyContent: "center" }}>
+          Blog Log In
+        </h1>
       </div>
-    </main>
+      <form
+        style={{ display: "flex", justifyContent: "center" }}
+        onSubmit={handleFormSubmit}
+      >
+        <Stack spacing={2}>
+          <MenuItem>
+            {" "}
+            <TextField
+              value={formState.email}
+              id="outlined-basic"
+              label="Email Address"
+              name="email"
+              type="email"
+              variant="outlined"
+              style={{ backgroundColor: "floralwhite" }}
+              onChange={handleChange}
+            />
+          </MenuItem>
+          <MenuItem>
+            <TextField
+              value={formState.password}
+              id="outlined-basic"
+              label="Password"
+              name="password"
+              placeholder="******"
+              type="text"
+              variant="outlined"
+              style={{ backgroundColor: "floralwhite" }}
+              onChange={handleChange}
+            />
+          </MenuItem>
+          {error && (
+            <div>
+              <p className="error-text">{error.message}</p>
+            </div>
+          )}
+
+          <MenuItem style={{ justifyContent: "center" }}>
+            <Button
+              id="login-button"
+              style={{ backgroundColor: deepOrange[500] }}
+              className="pop-on-hover"
+              xs={{ width: "100%" }}
+              variant="contained"
+              type="submit"
+            >
+              Submit
+            </Button>
+          </MenuItem>
+        </Stack>
+      </form>
+    </>
   );
 };
 

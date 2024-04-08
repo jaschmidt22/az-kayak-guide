@@ -27,13 +27,12 @@ export const QUERY_BLOGPOSTS = gql`
 `;
 
 export const QUERY_SINGLE_BLOGPOST = gql`
-  query getSingleBlogPost ($blogPostId: ID!) {
+  query getSingleBlogPost($blogPostId: ID!) {
     blogpost(blogPostId: $blogPostId) {
       _id
       blogPostText
       blogPostAuthor
-      createdAt 
-      }
+      createdAt
     }
   }
 `;
