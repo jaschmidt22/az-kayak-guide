@@ -9,8 +9,8 @@ const typeDefs = `
 
   type BlogPost {
     _id: ID
-    postText: String
-    postAuthor: String
+    blogPostText: String
+    blogPostAuthor: String
     createdAt: String
   }
 
@@ -25,6 +25,7 @@ const typeDefs = `
     blogposts(username: String): [BlogPost]
     blogpost(blogpostId: ID!): BlogPost
     me: User
+    meBlogs: [BlogPost]
   }
   
 

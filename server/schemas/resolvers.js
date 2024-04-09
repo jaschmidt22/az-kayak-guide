@@ -18,10 +18,19 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate("BlogPosts");
+        return User.findOne({ _id: context.user._id }).populate("blogPost");
       }
       throw AuthenticationError;
     },
+    meBlogs: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate("blogPost")
+        console.log(user)
+        console.log(user)
+        return user.blogPost
+      }
+      throw AuthenticationError
+    }
   },
 
   Mutation: {
@@ -47,19 +56,20 @@ const resolvers = {
 
       return { token, user };
     },
-    addBlogPost: async (parent, { blogPostText }, context) => {
+    addBlogPost: async (parent, { blogpostText }, context) => {
+      console.log(context.user)
       if (context.user) {
-        const BlogPost = await BlogPost.create({
-          blogPostText,
-          blogPostAuthor: context.user.username,
+        const post = await BlogPost.create({
+          blogPostText: blogpostText,
+          blogPostAuthor: context.user._id,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { BlogPosts: BlogPost._id } }
+          { $addToSet: { blogPost: post._id } }
         );
 
-        return BlogPost;
+        return post;
       }
       throw AuthenticationError;
       ("You need to be logged in!");

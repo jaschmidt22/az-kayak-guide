@@ -14,24 +14,20 @@ export const LOGIN_USER = gql`
 
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(name: $username) {
-      _id
-      username
-      email
-      blogposts
+    addUser(username: $username, email: $email, password: $password) {
+      token
+      user{
+        username
+      }
     }
   }
 `;
 export const ADD_BLOGPOST = gql`
   mutation addBlogPost(
-    $blogPostText: String!
-    $blogPostAuthor: String!
-    $createdAt: Date!
+    $blogpostText: String!
   ) {
     addBlogPost(
-      blogPostText: $blogPostText
-      blogPostAuthor: $blogPostAuthor
-      createdAt: $createdAt
+      blogpostText: $blogpostText
     ) {
       _id
       blogPostText
