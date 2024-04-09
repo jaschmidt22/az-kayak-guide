@@ -6,7 +6,7 @@ import Link from "@mui/material/Link";
 import "./Navigation.css";
 
 //function that renders the navigation bar
-function Navigation() {
+function Navigation({ isAuthenticated }) {
   const currentPage = useLocation().pathname; //use the useLocation hook to get the current page's pathname
 
   return (
@@ -41,6 +41,18 @@ function Navigation() {
         >
           Blog
         </Link>
+        {/* Conditional rendering for Dashboard link */}
+        {isAuthenticated && (
+          <Link
+            component={RouterLink}
+            to="/Dashboard"
+            underline="hover"
+            color="inherit"
+            className={currentPage === "/Dashboard" ? "nav-link active" : "nav-link"}
+          >
+            Dashboard
+          </Link>
+        )}
 
         <Link
           component={RouterLink}

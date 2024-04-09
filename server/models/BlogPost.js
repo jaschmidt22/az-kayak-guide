@@ -1,6 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 const blogPostSchema = new Schema({
+  title: String,
   blogPostText: String,
   blogPostAuthor: {
     type: Schema.Types.ObjectId,

@@ -1,21 +1,26 @@
 [
   {
+    "title": "First time at Canyon Lake",
     "blogPostText": "I love Canyon lake!",
     "blogPostAuthor": "User1"
   },
   {
+    "title": "Lakes to try",
     "blogPostText": "I can't wait to try Saguaro Lake.",
     "blogPostAuthor": "User2"
   },
   {
+    "title": "Fishing at Roosevelt Lake",
     "blogPostText": "I caught so many fish at Roosevelt Lake.",
     "blogPostAuthor": "User3"
   },
   {
+    "title": "Trip to Willow Springs!",
     "blogPostText": "Willow Springs lake is so beautiful.",
     "blogPostAuthor": "User4"
   },
   {
+    "title": "Its called fishing, not catching",
     "blogPostText": "I didn't catch any fish at Big Lake!",
     "blogPostAuthor": "User5"
   }
