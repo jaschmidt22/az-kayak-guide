@@ -6,12 +6,32 @@ import Apache from "./LAKES_images/Apache-Lake-central.jpeg";
 import ParkerCanyon from "./LAKES_images/Parker-Canyon-Lake-southern.jpg";
 import Patagonia from "./LAKES_images/Patagonia-Lake-southern.jpg";
 import CardMedia from "@mui/material/CardMedia";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
+
 
 // Function that renders the about page & exports
+const regions = ["Northern Arizona", "Central Arizona", "Southern Arizona"];
 export default function Lakes() {
   return (
     <>
+
+      <div className="region">
+        <Autocomplete
+          disablePortal
+          id="region-menu"
+          style={{ padding: "0px 0px 0px 0px" }}
+          options={regions}
+          sx={{ width: 200 }}
+          renderInput={(params) => (
+            <TextField {...params} label="Select Region" />
+          )}
+        />
+      </div>
+
+
       <div style={{ width: "70%", margin: "0 auto" }}>
+
         <h1 id="about-me-title">Northern Arizona</h1>
 
         <h4 className="Lakes-Heading">Lake Powell (Northern AZ)</h4>
@@ -23,7 +43,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={LakePowell}
             alt="LakePowell Image"
@@ -41,7 +61,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px"
             }}
             image={Alamo}
             alt="Alamo Image"
@@ -57,7 +77,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={Apache}
             alt="Apache Image"
@@ -73,7 +93,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={Canyon}
             alt="Canyon Image"
@@ -91,7 +111,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={ParkerCanyon}
             alt="ParkerCanyon Image"
@@ -107,7 +127,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={Patagonia}
             alt="Patagonia Image"

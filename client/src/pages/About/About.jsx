@@ -10,18 +10,21 @@ export default function About() {
   return (
     <>
       <div className="region">
-        <div className="about-title"> Come Yak with Zak! </div>
+        
         <Autocomplete
           disablePortal
           id="region-menu"
-          style={{ padding: "10px 0px 0px 0px" }}
+          style={{ padding: "0px 0px 0px 0px" }}
           options={regions}
-          sx={{ width: 300 }}
+          sx={{ width: 200 }}
           renderInput={(params) => (
             <TextField {...params} label="Select Region" />
           )}
         />
       </div>
+
+      <div className="about-title"> Come Yak with Zak! </div>
+
       <div className="image-container">
         <CardMedia
           component="img"
