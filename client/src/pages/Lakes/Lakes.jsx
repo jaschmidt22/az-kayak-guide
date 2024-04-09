@@ -16,7 +16,6 @@ export default function Lakes() {
   return (
     <>
 
-
       <div className="region">
         <Autocomplete
           disablePortal
@@ -31,8 +30,8 @@ export default function Lakes() {
       </div>
 
 
-
       <div style={{ width: "70%", margin: "0 auto" }}>
+
         <h1 id="about-me-title">Northern Arizona</h1>
 
         <h4 className="Lakes-Heading">Lake Powell (Northern AZ)</h4>
@@ -44,7 +43,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={LakePowell}
             alt="LakePowell Image"
@@ -62,7 +61,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px"
             }}
             image={Alamo}
             alt="Alamo Image"
@@ -78,7 +77,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={Apache}
             alt="Apache Image"
@@ -94,7 +93,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={Canyon}
             alt="Canyon Image"
@@ -112,7 +111,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={ParkerCanyon}
             alt="ParkerCanyon Image"
@@ -128,7 +127,7 @@ export default function Lakes() {
               height: "auto",
               width: "50%",
               margin: "0 auto",
-              paddingTop: "20px",
+              paddingBottom: "30px",
             }}
             image={Patagonia}
             alt="Patagonia Image"

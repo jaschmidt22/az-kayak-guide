@@ -23,6 +23,7 @@ h1 {
     display: flex;
     justify-content: center;
     color: #042f68;
+    padding-top: 20px;
 }
 
 #p-about {
