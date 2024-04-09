@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-    "mongodb+srv://jessicaschmidt22:Je$$1ca80@cluster0.spuxllz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true"
+    "mongodb+srv://jessicaschmidt22:Je$$1ca80@cluster0.spuxllz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true"
 );
 
 module.exports = mongoose.connection;
