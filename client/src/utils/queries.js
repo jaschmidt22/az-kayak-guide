@@ -17,7 +17,7 @@ export const QUERY_USER = gql`
 
 export const QUERY_BLOGPOSTS = gql`
   query getBlogPosts {
-    blogPosts {
+    blogposts {
       _id
       blogPostText
       blogPostAuthor

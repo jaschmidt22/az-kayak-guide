@@ -6,6 +6,10 @@ const blogPostSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User", // Reference to the User model
   },
+  createdAt: {
+    type: Date,
+    default: Date.now()
+  }
 });
 
 const BlogPost = model("BlogPost", blogPostSchema);

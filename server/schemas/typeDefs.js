@@ -25,6 +25,7 @@ const typeDefs = `
     blogposts(username: String): [BlogPost]
     blogpost(blogpostId: ID!): BlogPost
     me: User
+    meBlogs: [BlogPost]
   }
   
 
