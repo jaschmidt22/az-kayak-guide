@@ -6,8 +6,4 @@ mongoose.connect(
 
 module.exports = mongoose.connection;
 
-
-
-
-
-mongodb+srv://jessicaschmidt22:<password>@cluster0.spuxllz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+//mongodb+srv://jessicaschmidt22:<password>@cluster0.spuxllz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
