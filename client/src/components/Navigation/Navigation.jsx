@@ -17,10 +17,11 @@ function Navigation() {
           to="/"
           underline="hover"
           color="inherit"
-          className={currentPage === "/About" ? "nav-link active" : "nav-link"}
+          className={currentPage === "/" ? "nav-link active" : "nav-link"}
         >
           About
         </Link>
+
         <Link
           component={RouterLink}
           to="/Lakes"
@@ -40,6 +41,7 @@ function Navigation() {
         >
           Blog
         </Link>
+
         <Link
           component={RouterLink}
           to="/Login"
@@ -49,6 +51,7 @@ function Navigation() {
         >
           Login
         </Link>
+
         <Link
           component={RouterLink}
           to="/Signup"
@@ -58,6 +61,7 @@ function Navigation() {
         >
           Sign-up
         </Link>
+
       </Breadcrumbs>
     </div>
   );

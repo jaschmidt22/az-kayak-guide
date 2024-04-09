@@ -10,7 +10,7 @@ import "./Header.css";
 export default function Header() {
   return (
     <div className="wrapper">
-      <div className="headerParent" style={{ padding: "0px 0px 0px 60px" }}>
+      <div className="headerParent" style={{ padding: "0px 10px 0px 50px" }}>
         <p id="header-text">
           AZ Kayak Guide{" "}
           <KayakingIcon sx={{ color: deepOrange[500] }} fontSize="Large" />
