@@ -6,11 +6,32 @@ import Apache from "./LAKES_images/Apache-Lake-central.jpeg";
 import ParkerCanyon from "./LAKES_images/Parker-Canyon-Lake-southern.jpg";
 import Patagonia from "./LAKES_images/Patagonia-Lake-southern.jpg";
 import CardMedia from "@mui/material/CardMedia";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
+
 
 // Function that renders the about page & exports
+const regions = ["Northern Arizona", "Central Arizona", "Southern Arizona"];
 export default function Lakes() {
   return (
     <>
+
+
+      <div className="region">
+        <Autocomplete
+          disablePortal
+          id="region-menu"
+          style={{ padding: "0px 0px 0px 0px" }}
+          options={regions}
+          sx={{ width: 200 }}
+          renderInput={(params) => (
+            <TextField {...params} label="Select Region" />
+          )}
+        />
+      </div>
+
+
+
       <div style={{ width: "70%", margin: "0 auto" }}>
         <h1 id="about-me-title">Northern Arizona</h1>
 
