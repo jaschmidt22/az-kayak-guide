@@ -9,6 +9,7 @@ const typeDefs = `
 
   type BlogPost {
     _id: ID
+    title: String
     blogPostText: String
     blogPostAuthor: String
     createdAt: String
@@ -33,7 +34,7 @@ const typeDefs = `
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addBlogPost(blogpostText: String!): BlogPost
+    addBlogPost(title: String!, blogpostText: String!): BlogPost
     removeBlogPost(blogpostId: ID!): BlogPost
     updateBlogPost(blogPostId: ID!, updatedText: String!): BlogPost
   }

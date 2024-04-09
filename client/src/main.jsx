@@ -92,6 +92,7 @@ function Dashboard(props) {
     <div>
       <Button onClick={handleOpen} variant="contained">Add Blog Post</Button>
       <AddBlogModal open={open} handleClose={handleClose} />
+
     </div>
   );
 

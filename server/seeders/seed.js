@@ -29,6 +29,7 @@ db.once("open", async () => {
 
       // Create the blog post and associate it with the user
       await BlogPost.create({
+        title: blogPostSeed.title,
         blogPostText: blogPostSeed.blogPostText,
         blogPostAuthor: user._id, // Associate with user's ID
       });
