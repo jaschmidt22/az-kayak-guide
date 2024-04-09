@@ -7,6 +7,7 @@ import About from "./pages/About/About.jsx";
 import Lakes from "./pages/Lakes/Lakes.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Signup from "./pages/Signup/Signup.jsx";
+import Blog from "./pages/Blog/Blog.jsx";
 
 import "./index.css";
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/Login",
         element: <Login />,
+      },
+      {
+        path: "/Blog",
+        element: <Blog />
       },
     ],
   },

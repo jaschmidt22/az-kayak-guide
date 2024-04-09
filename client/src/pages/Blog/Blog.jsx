@@ -9,17 +9,15 @@ const Blog = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <>
-            <div>
-                <h1>Blog Posts</h1>
-                {data.blogPosts.map(BlogPost => (
-                    <div key={BlogPost.id}>
-                        <h2>{BlogPost.title}</h2>
-                        <p>{BlogPost.content}</p>
-                    </div>
-                ))}
-            </div>
-        </>
+        <div>
+            <h1>Blog Posts</h1>
+            {data.blogPosts.map(blogPost => (
+                <div key={blogPost._id}>
+                    <h2>{blogPost.postAuthor}</h2>
+                    <p>{blogPost.postText}</p>
+                </div>
+            ))}
+        </div>
     );
 };
 
