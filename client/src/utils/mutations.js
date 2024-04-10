@@ -25,9 +25,11 @@ export const ADD_USER = gql`
 export const ADD_BLOGPOST = gql`
   mutation addBlogPost(
     $blogpostText: String!
+    $title: String!
   ) {
     addBlogPost(
       blogpostText: $blogpostText
+      title: $title
     ) {
       _id
       blogPostText

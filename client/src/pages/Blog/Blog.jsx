@@ -1,34 +1,4 @@
-// import React from 'react';
-// import { useQuery } from '@apollo/client';
-// import Card from '@material-ui/core/Card';
-// import CardContent from '@material-ui/core/CardContent';
-// import Typography from '@material-ui/core/Typography';
-// import { QUERY_BLOGPOSTS } from '../../utils/queries';
 
-// const Blog = () => {
-//     const { loading, error, data } = useQuery(QUERY_BLOGPOSTS);
-
-//     if (loading) return <p>Loading...</p>;
-//     if (error) return <p>Error: {error.message}</p>;
-
-//     return (
-//         <div>
-//             <h1>Blog Posts</h1>
-//             {data && data.blogposts && data.blogposts.map(blogPost => (
-//                 <Card key={blogPost._id} style={{ marginBottom: '20px' }}>
-//                     <CardContent>
-//                         <Typography variant="h5" component="h2">
-//                             {blogPost.title}
-//                         </Typography>
-//                         <Typography variant="body2" component="p">
-//                             {blogPost.blogPostText}
-//                         </Typography>
-//                     </CardContent>
-//                 </Card>
-//             ))}
-//         </div>
-//     );
-// }
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_BLOGPOSTS } from '../../utils/queries';
