@@ -1,7 +1,11 @@
 
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_BLOGPOSTS } from '../../utils/queries';
+import { Card, CardContent, Typography } from '@mui/material';
+
 const Blog = () => {
     const { loading, error, data } = useQuery(QUERY_BLOGPOSTS);
-
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
@@ -34,4 +38,3 @@ const Blog = () => {
 }
 
 export default Blog;
-

@@ -1,12 +1,16 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import { useQuery, gql, useMutation } from "@apollo/client";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AuthService from '../../client/src/utils/auth.js';
+import { REMOVE_BLOGPOST, UPDATE_BLOGPOST } from '../src/utils/mutations.js';
+import { Card, CardContent, Typography } from '@mui/material';
+
 
 import Modal from "@mui/material/Modal"
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography'
+
 import TextInput from "@mui/material/TextField"
 
 import App from "./App.jsx";
@@ -78,36 +82,113 @@ const style = {
 };
 
 
+// function Dashboard(props) {
+
+//   const { data, loading } = useQuery(ME_BLOGS)
+
+//   console.log(data)
+
+//   const [open, setOpen] = React.useState(false);
+//   const handleOpen = () => setOpen(true);
+//   const handleClose = () => setOpen(false);
+
+//   return (
+//     <div>
+//       <Button onClick={handleOpen} variant="contained">Add Blog Post</Button>
+//       <AddBlogModal open={open} handleClose={handleClose} />
+
+
+//     </div>
+
+
+//   );
+
+// }
+
+
 function Dashboard(props) {
-
-  const { data, loading } = useQuery(ME_BLOGS)
-
+  const { data, loading, refetch } = useQuery(ME_BLOGS);
+  const [isOpen, setIsOpen] = React.useState(false)
+  const handleClose = () => setIsOpen(false)
   console.log(data)
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [removeBlogPost] = useMutation(REMOVE_BLOGPOST);
+  const [updateBlogPost] = useMutation(UPDATE_BLOGPOST);
+
+  const handleDelete = async (blogPostId) => {
+    try {
+      await removeBlogPost({
+        variables: { blogPostId },
+      });
+      // Refetch the blog posts after deletion
+      refetch();
+    } catch (error) {
+      console.error('Error deleting blog post:', error);
+    }
+  };
+
+  const handleUpdate = async (blogPostId) => {
+    try {
+      const updatedText = prompt('Enter updated text:');
+      if (updatedText) {
+        await updateBlogPost({
+          variables: {
+            blogPostId,
+            updatedText,
+            updatedAt: new Date().toISOString(), // Update the updatedAt field
+          },
+        });
+        // Refetch the blog posts after update
+        refetch();
+      }
+    } catch (error) {
+      console.error('Error updating blog post:', error);
+    }
+  };
 
   return (
     <div>
-      <Button onClick={handleOpen} variant="contained">Add Blog Post</Button>
-      <AddBlogModal open={open} handleClose={handleClose} />
-
+      <h1>Blog Posts</h1>
+      <Button onClick={e => setIsOpen(true)}>Add Blog Post</Button>
+      <AddBlogModal open={isOpen} handleClose={handleClose} />
+      {loading ? <p>Loading...</p> : (
+        <div>
+          {data && data.meBlogs && data.meBlogs.map(blogPost => (
+            <Card key={blogPost._id} style={{ marginBottom: '20px' }}>
+              <CardContent>
+                <Typography variant="h5" component="h2">
+                  {blogPost.title}
+                </Typography>
+                <Typography variant="body2" component="p">
+                  {blogPost.blogPostText}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Created At: {new Date(parseInt(blogPost.createdAt)).toLocaleString()}
+                </Typography>
+                <Button variant="contained" color="primary" onClick={() => handleUpdate(blogPost._id)}>Update</Button>
+                <Button variant="contained" color="secondary" onClick={() => handleDelete(blogPost._id)}>Delete</Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
     </div>
   );
-
 }
+
 
 
 function AddBlogModal({ open, handleClose }) {
   const [addBlogPost] = useMutation(ADD_BLOGPOST);
   const [blogpostText, setBlogPostTest] = React.useState('')
+  const [title, setTitle] = React.useState('')
 
   const handleSubmit = e => {
     e.preventDefault();
     addBlogPost({
       variables: {
-        blogpostText
+        blogpostText,
+        title
       }
     })
   }
@@ -121,6 +202,7 @@ function AddBlogModal({ open, handleClose }) {
     >
       <Box sx={style}>
         <form onSubmit={handleSubmit}>
+          <TextInput value={title} onChange={e => setTitle(e.target.value)} />
           <TextInput value={blogpostText} onChange={e => setBlogPostTest(e.target.value)} />
           <Button variant="contained" type="submit">Submit</Button>
         </form>
